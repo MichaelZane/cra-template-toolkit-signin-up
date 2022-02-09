@@ -1,0 +1,22 @@
+{
+  "name": "cra-template-toolkit-signin-up",
+  "version": "1.0.0",
+  "description": "A react template that includes redux toolkit with auth0.",
+  "main": "template.json",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichaelZane/cra-template-toolkit-signin-up.git"
+  },
+  "author": "Michael Stevens",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MichaelZane/cra-template-toolkit-signin-up/issues"
+  },
+  "homepage": "https://github.com/MichaelZane/cra-template-toolkit-signin-up#readme"
+}
