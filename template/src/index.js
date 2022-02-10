@@ -6,13 +6,33 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import './index.css';
 import App from './App';
 
+//function that routes the user to the correct page
+
+const onRedirectCallback = (appState) => {
+  window.history.replaceState(
+    {},
+    document.title,
+    appState && appState.targetUrl
+      ? appState.targetUrl
+      : window.location.pathname
+  )
+}
+
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
+    <Auth0Provider
+      domain={process.env.REACT_APP_AUTH0_DOMAIN}
+      client_id={process.env.REACT_APP_AUTH0_CLIENT_ID}
+      redirect_uri={window.location.origin}
+      audience={process.env.REACT_APP_AUTH0_AUDIENCE}
+      onRedirectCallback={onRedirectCallback}
+    >
       <Provider store={store}>
-        <App />,
+        <Router>
+          <App />,
+        </Router>
       </Provider>
-    </Router>
+    </Auth0Provider>
   </React.StrictMode>,
     
   document.getElementById('root')

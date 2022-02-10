@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@auth0/auth0-react": "^1.9.0",
     "@reduxjs/toolkit": "^1.7.2",
     "bootstrap": "^5.1.3",
     "react-bootstrap": "^2.1.2",
@@ -9,5 +10,11 @@
     "react-router-config": "^4.3.1",
     "react-router-scroll": "^1.0.0-beta.3",
     "react-router-transition": "^3.2.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   }
 }
