@@ -1,6 +1,6 @@
 {
   "name": "cra-template-toolkit-signin-up",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A react template that includes redux toolkit with auth0.",
   "main": "template.json",
   "repository": {
