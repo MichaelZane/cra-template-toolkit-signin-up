@@ -23,7 +23,7 @@ const renameSlice = createSlice({
     },
   },
   extraReducers: {
-    [fetchAsyncRename.pending]: () => {
+    [fetchAsyncRename.pending]: (state) => {
       // Add your code here
       state.loading = true;
     },

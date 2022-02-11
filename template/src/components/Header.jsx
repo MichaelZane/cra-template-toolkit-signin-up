@@ -1,14 +1,24 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Offcanvas from 'react-bootstrap/Offcanvas';
+import Form from 'react-bootstrap/Form';
+import FormControl from 'react-bootstrap/FormControl';
+import Logout from './Logout'
+import LoginBtn from './LoginBtn';
 
 
-
-export const Header = () => {
+const Header = () => {
 // more navbars at https://react-bootstrap.github.io/components/navbar/
   return (
    <Navbar bg="light" expand={false}>
     <Container fluid>
-      <Navbar.Brand href="#">Navbar Offcanvas</Navbar.Brand>
+      <Navbar.Brand href="#">Your App Name</Navbar.Brand>
+      <Logout />
+      <LoginBtn />
         <Navbar.Toggle aria-controls="offcanvasNavbar" />
         <Navbar.Offcanvas
           id="offcanvasNavbar"
@@ -16,7 +26,7 @@ export const Header = () => {
           placement="end"
         >
           <Offcanvas.Header closeButton>
-            <Offcanvas.Title id="offcanvasNavbarLabel">Offcanvas</Offcanvas.Title>
+            <Offcanvas.Title id="offcanvasNavbarLabel">App Name</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="justify-content-end flex-grow-1 pe-3">
@@ -46,3 +56,4 @@ export const Header = () => {
     </Navbar>
   )
 };
+export default Header
