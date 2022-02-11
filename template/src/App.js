@@ -22,19 +22,22 @@ export default function App() {
             <NotFound />
           </Route>
         </Switch>
-
+        <Container>
         <Copyright />
+        </Container>
       </Container>
     </Router>
   );
 
   function Copyright() {
     return (
-      <div>
-        Place your name here
+      <Container fluid="true"  >
+        <div className="text-center" >
+        <span className="center-text" >Place your name here</span>
         <br />
-        Copyright © {new Date().getFullYear()}
-      </div>
+        <span>Copyright © {new Date().getFullYear()}</span>
+        </div>
+      </Container>
     );
   }
 }
