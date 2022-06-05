@@ -1,5 +1,5 @@
 import React from "react";
-import { } from "react-router-dom";
+import {Routes, Route } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import Header from "./components/Header";
 import Home from "./components/Home";
@@ -11,22 +11,16 @@ export default function App() {
   const history = createBrowserHistory();
 
   return (
-    <Router history={history}>
+    <Routes history={history}>
       <Container fluid>
         <Header />
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="*">
-            <NotFound />
-          </Route>
-        </Switch>
+        <Route exact path="/" element={<Home />} />
+        <Route path="*" element={<NotFound />} />
         <Container>
         <Copyright />
         </Container>
       </Container>
-    </Router>
+    </Routes>
   );
 
   function Copyright() {
